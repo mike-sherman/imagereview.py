@@ -16,7 +16,7 @@ The images reviewd are tracked in in a json file.
 * Json
 
 
-## Instalation
+## Installation
 Enter values for the following in the code:
 * "/path/to/imagereview.ui"           - where the imagereview.ui file is located
 * base_dir = '/path/to/images/'       - where the local folders of images are located
