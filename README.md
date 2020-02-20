@@ -21,3 +21,5 @@ Enter values for the following in the code:
 * "/path/to/imagereview.ui"           - where the imagereview.ui file is located
 * base_dir = '/path/to/images/'       - where the local folders of images are located
 * prog_dir = '/path/to/imagereview/'  - where the program data file is stored
+
+![Screenshot](https://raw.githubusercontent.com/mike-sherman/imagereview.py/master/image%20review.png?raw=true)
