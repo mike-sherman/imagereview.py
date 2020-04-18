@@ -9,6 +9,7 @@
 # imagereview7 - select folder always starts at base dir
 # imagereview8 - add animate button to make a video of the current folder
 # imagereview9 - add progress bar
+# imagereview9.1 - check if the log file exists
 
 import sys
 import os
@@ -72,8 +73,9 @@ class MyApp(QMainWindow, Ui_MainWindow):
         self.ui.folderButton.setToolTip('Choose directory')
         
         # read the log file
-        with open(self.log_file, 'r') as filelist:
-            self.data = json.load(filelist)
+        if os.path.exists (self.log_file):
+            with open(self.log_file, 'r') as filelist:
+                self.data = json.load(filelist)
         
         # Buttons
         self.ui.nextButton.clicked.connect(self.nextimage)

@@ -13,6 +13,7 @@ The images reviewd are tracked in in a json file.
 ## Revision 9 adds 
 * A button to create an animation of any days images with controlable framerate.
 * A progress bar for functions that can take some time.
+* Doesn't crash if the log file doesn't exist.
 
 ## Requirements
 * Python 3
