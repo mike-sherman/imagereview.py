@@ -10,6 +10,7 @@
 # imagereview8 - add animate button to make a video of the current folder
 # imagereview9 - add progress bar
 # imagereview9.1 - check if the log file exists
+# imagereview9.2 - close the log file
 
 import sys
 import os
@@ -76,6 +77,7 @@ class MyApp(QMainWindow, Ui_MainWindow):
         if os.path.exists (self.log_file):
             with open(self.log_file, 'r') as filelist:
                 self.data = json.load(filelist)
+                del(filelist)
         
         # Buttons
         self.ui.nextButton.clicked.connect(self.nextimage)
@@ -402,6 +404,7 @@ class MyApp(QMainWindow, Ui_MainWindow):
     def savedatafile(self):
         with open(self.log_file, 'w') as file:
             json.dump(self.data,  file)
+            del(file)
             
     # ------------------------------------------------------------------
     # display the current image
